@@ -5,6 +5,8 @@ public class Main {
 		
 		System.out.println("Olá, GIT!");
 		
+		System.out.println("teste de integração");
+		
 
 	}
 
