@@ -58,6 +58,14 @@ public class Task {
 	}
 
 	
+	public String getTaskPriority() {
+		return taskPriority;
+	}
+
+	public void setTaskPriority(String taskPriority) {
+		this.taskPriority = taskPriority;
+	}
+
 	@Override
 	public String toString() {
 		return 	"Data de criação: " + creationDate + "\n" +
