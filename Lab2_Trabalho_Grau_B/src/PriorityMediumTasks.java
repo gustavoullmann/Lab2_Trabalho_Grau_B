@@ -1,5 +1,5 @@
 
-public class PriorityMediumTasks extends SinglyLinkedTaskList {
+public class PriorityMediumTasks extends SinglyLinkedList<Task> {
 
 	public PriorityMediumTasks() {
 		super();	

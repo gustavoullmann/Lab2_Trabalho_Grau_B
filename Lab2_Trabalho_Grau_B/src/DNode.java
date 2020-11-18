@@ -1,43 +1,41 @@
 
-public class DNode {
-	private Day dayDate;
-	private DNode next;
-	private DNode previous;
+public class DNode<E> {
+	protected E element;
+	protected DNode<E> next;
+	protected DNode<E> previous;
 	
-	public DNode(Day dayDate) {
-		this.dayDate = dayDate;
-		this.next = null;
-		this.previous = null;
+	public DNode(E element) {
+		this(element, null, null);
 	}
 	
-	public DNode(Day dayDate, DNode next, DNode previous) {
+	public DNode(E element, DNode<E> next, DNode<E> previous) {
 		super();
-		this.dayDate = dayDate;
+		this.element = element;
 		this.next = next;
 		this.previous = previous;
 	}
 	
-	public Day getDayDate() {
-		return dayDate; 
+	public E getElement() {
+		return element; 
 	}
 	
-	public void setDayDate(Day dayDate) { 
-		this.dayDate = dayDate; 
+	public void setElement(E element) { 
+		this.element = element; 
 	}
 	
-	public DNode getNext() { 
+	public DNode<E> getNext() { 
 		return next;
 	}
 	
-	public void setNext(DNode next) {
+	public void setNext(DNode<E> next) {
 		this.next = next; 
 	}
 	
-	public DNode getPrevious() {
+	public DNode<E> getPrevious() {
 		return previous;
 	}
 	
-	public void setPrevious(DNode previous) {
+	public void setPrevious(DNode<E> previous) {
 		this.previous = previous;
 	}	
 }

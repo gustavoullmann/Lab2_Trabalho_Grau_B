@@ -36,10 +36,5 @@ public class Day {
 				"Tarefas baixa prioridade: " + lowTaskList + "\n" +
 				"Tarefas média prioridade: " + mediumTaskList +"\n" +
 				"Tarefas alta prioridade: " + highTaskList;
-	}
-
-	
-
-	
-	
+	}	
 }

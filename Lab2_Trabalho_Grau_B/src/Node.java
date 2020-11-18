@@ -1,26 +1,26 @@
 
-public class Node {
-	private Task tarefa;
-	private Node next;
+public class Node<E> {
+	protected E element;
+	protected Node<E> next;
 
-	public Node(Task tarefa) {
-		this.tarefa = tarefa;
+	public Node(E e) {
+		element = e;
 		next = null;
 	}
 
-	public Task getTask() {
-		return tarefa; 
-	}
-	
-	public void setTask(Task tarefa) { 
-		this.tarefa = tarefa; 
+	public E getElement() {
+		return element; 
 	}
 
-	public Node getNext() { 
+	public Node<E> getNext() { 
 		return next;
 	}
 
-	public void setNext(Node node) {
-		next = node; 
+	public void setElement(E e) { 
+		element = e; 
+	}
+
+	public void setNext(Node<E> n) {
+		next = n; 
 	}
 }
