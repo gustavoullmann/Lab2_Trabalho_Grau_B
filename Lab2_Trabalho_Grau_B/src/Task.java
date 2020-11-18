@@ -68,7 +68,8 @@ public class Task {
 
 	@Override
 	public String toString() {
-		return 	"Data de criação: " + creationDate + "\n" +
+		return 	"\n" +
+				"Data de criação: " + creationDate + "\n" +
 				"Data para conclusão: " + scheduledDateToAccomplish + "\n" +
 				"Nova data para conclusão: " + reScheduledDateToAccomplish + "\n" +
 				"Data de conclusão: " + accomplishedDate + "\n" +

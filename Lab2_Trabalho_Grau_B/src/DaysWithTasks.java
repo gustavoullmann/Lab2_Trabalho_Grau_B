@@ -1,10 +1,10 @@
 
-public class DoublyLinkedDayList implements DayList {
+public class DaysWithTasks implements DayList {
 	protected DNode head;
 	protected DNode tail;
 	protected int numElements;
 
-	public DoublyLinkedDayList() {
+	public DaysWithTasks() {
 		head = tail = null;
 		numElements = 0;
 	}
@@ -181,7 +181,7 @@ public class DoublyLinkedDayList implements DayList {
 
 		DNode current = head;
 		while (current != null) {
-			s += current.getDayDate().toString() + " ";
+			s += current.getDayDate().getDayDate();
 			current = current.getNext();
 		}
 		return s;

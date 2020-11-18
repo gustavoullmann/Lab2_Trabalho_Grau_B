@@ -30,6 +30,15 @@ public class Day {
 		return highTaskList;
 	}
 
+	@Override
+	public String toString() {
+		return	dayDate + "\n" +
+				"Tarefas baixa prioridade: " + lowTaskList + "\n" +
+				"Tarefas média prioridade: " + mediumTaskList +"\n" +
+				"Tarefas alta prioridade: " + highTaskList;
+	}
+
+	
 
 	
 	

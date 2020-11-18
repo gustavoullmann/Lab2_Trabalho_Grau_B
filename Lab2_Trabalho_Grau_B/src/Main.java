@@ -3,28 +3,19 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Task tarefa1 = new TaskHigh(2020,11,20, "fazer um bolo");
-		Task tarefa2 = new TaskHigh(2020,11,21, "fazer um churrasco");
-		Task tarefa3 = new TaskHigh(2020,11,22, "fazer uma pizza");
+		User usuarioGustavo = new User("Gustavo");
 		
-		SinglyLinkedTaskList lista = new PriorityHighTasks();
+		Task tarefa1 = new TaskHigh(2020, 11, 20, "fazer um bolo");
+		Task tarefa2 = new TaskHigh(2020, 11, 20, "fazer um churrasco");
 		
-		lista.insertLast(tarefa1);
-		lista.insertLast(tarefa2);
-		lista.insertLast(tarefa3);
+		Day dia20201120 = new Day(2020,11,20);
 		
-		System.out.println(lista.toString());
+		dia20201120.getHighTaskList().insertFirst(tarefa2);
+		dia20201120.getHighTaskList().insertFirst(tarefa1);
 		
-		lista.remove(1);
+		usuarioGustavo.getTaskList().insertFirst(dia20201120);
 		
-		System.out.println(lista.toString());
-		
-		
-		
-		
-	
-		
-
+		System.out.println(dia20201120.toString());
 	}
 
 }
