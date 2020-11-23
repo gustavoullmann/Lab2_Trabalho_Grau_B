@@ -1,11 +1,12 @@
 
 public class DNode<E> {
-	protected E element;
-	protected DNode<E> next;
-	protected DNode<E> previous;
+	private E element;
+	private DNode<E> next;
+	private DNode<E> previous;
 	
 	public DNode(E element) {
-		this(element, null, null);
+		this.element = element;
+		previous = next = null;
 	}
 	
 	public DNode(E element, DNode<E> next, DNode<E> previous) {
