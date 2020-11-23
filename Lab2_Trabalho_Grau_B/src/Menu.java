@@ -1,5 +1,4 @@
 
-import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Menu {
@@ -23,7 +22,10 @@ public class Menu {
 		
 			case 1:
 				
-				RegisteredUsers.CreateUser();
+				RegisteredUsers usuariosRegistrados = new RegisteredUsers();
+				User newUser = RegisteredUsers.CreateUser();
+				usuariosRegistrados.insertLast(newUser);
+				usuariosRegistrados.registeredUsersLogWriter(newUser.getName());
 			
 			case 2:
 				

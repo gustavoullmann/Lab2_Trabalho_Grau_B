@@ -1,4 +1,5 @@
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,19 +11,18 @@ public class RegisteredUsers extends DoublyLinkedList<User> {
 		super();
 	}
 	
-	public void registeredUsersLogWriter() {
+	public void registeredUsersLogWriter(String nome) {
 		
-		try {
-			DNode<User> current = head;			
-			while(current != null) {
-				String nome = current.getElement().getName();
-				BufferedWriter fileWriter = new BufferedWriter(new FileWriter("registeredUsersList", true));
-				fileWriter.write(nome);
-				fileWriter.newLine();
-				fileWriter.flush();
-				fileWriter.close();
-				current = current.getNext();
-			}				
+		try {		
+			
+			File registeredUsersList = new File("registeredUsersList");
+			
+			BufferedWriter fileWriter = new BufferedWriter(new FileWriter("registeredUsersList", true));
+			fileWriter.write(nome);
+			fileWriter.newLine();
+			fileWriter.flush();
+			fileWriter.close();
+						
 		} 
 		catch (FileNotFoundException e) {
 			System.out.println("O arquivo 'registeredUsersList.txt' não existe!");
@@ -32,8 +32,8 @@ public class RegisteredUsers extends DoublyLinkedList<User> {
 		}
 	}
 	
-	public static void CreateUser() {
-		
+	public static User CreateUser() {
+						
 		Scanner input = new Scanner(System.in);
 		
 		System.out.println("\n\t" + "Opção 1 - Criar um novo usuário" + "\n");
@@ -41,10 +41,11 @@ public class RegisteredUsers extends DoublyLinkedList<User> {
 	
 		String name = input.nextLine();
 		User newUser = new User(name);
+		input.close();
 		
-		
-		
-		System.out.println("O usuário " + name + " foi cadastrado com sucesso!");
+		System.out.println("\n\t" + "O usuário " + name + " foi cadastrado com sucesso!" + "\n");
 		Menu.menu();
+		
+		return newUser;
 	}
 }
